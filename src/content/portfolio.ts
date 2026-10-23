@@ -1,6 +1,5 @@
 // Single source of truth for all portfolio content.
 // Edit values here; components render whatever is configured.
-import portraitAsset from "@/assets/shailendra-dp.jpg.asset.json";
 
 export const profile = {
   name: "Shailendra Kumar Bharti",
@@ -19,7 +18,7 @@ export const profile = {
   resumeHref:
     "https://drive.google.com/file/d/1b8Nsk1VCRRuTn88C3JZMPuj-7htYIPIJ/view?usp=drive_link",
   portrait: {
-    src: portraitAsset.url,
+    src: "/images/profile.jpg",
     alt: "Portrait of Shailendra Kumar Bharti",
   },
 } as const;
