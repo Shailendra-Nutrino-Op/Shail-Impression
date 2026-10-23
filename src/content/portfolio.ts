@@ -1,4 +1,3 @@
-```typescript
 // Single source of truth for all portfolio content.
 // Edit values here; components render whatever is configured.
 
@@ -276,4 +275,3 @@ export const certifications: Certification[] = [
   },
   { name: "Solved 100+ DSA problems on CodeChef" },
 ];
-```
