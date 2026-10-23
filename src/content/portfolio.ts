@@ -17,7 +17,7 @@ export const profile = {
   githubHandle: "Shailendra-Nutrino-Op",
   /** Resume hosted on Google Drive; opens in a new tab. */
   resumeHref:
-    "https://drive.google.com/file/d/188R_E8MH3lpxfPSKyLgtHg0zDeyRsAiI/view?usp=sharing",
+    "https://drive.google.com/file/d/1b8Nsk1VCRRuTn88C3JZMPuj-7htYIPIJ/view?usp=drive_link",
   portrait: {
     src: portraitAsset.url,
     alt: "Portrait of Shailendra Kumar Bharti",
