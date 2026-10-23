@@ -1,6 +1,6 @@
 // Single source of truth for all portfolio content.
 // Edit values here; components render whatever is configured.
-import portraitAsset from "@/assets/shailendra-dp.jpg.asset.json";
+import portraitAsset from "@/assets/Shaildp.jpg.asset.json";
 
 export const profile = {
   name: "Shailendra Kumar Bharti",
