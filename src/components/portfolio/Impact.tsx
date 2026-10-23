@@ -5,12 +5,9 @@ export function Impact() {
     <section aria-labelledby="impact-title" className="bg-ink text-ink-foreground">
       <div className="shell py-16 sm:py-20 lg:py-24">
         <div className="grid gap-6 border-t border-ink-rule pt-3 sm:grid-cols-12">
-          <p className="eyebrow text-accent sm:col-span-3">§ 00 — Ledger</p>
+          <p className="eyebrow text-accent sm:col-span-3">§ 00 — Impact</p>
           <h2 id="impact-title" className="display-md sm:col-span-9">
             Engineering impact
-            <span className="meta ml-3 align-middle font-normal text-ink-muted">
-              — figures from separate projects, as reported in my resume
-            </span>
           </h2>
         </div>
 

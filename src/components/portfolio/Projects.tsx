@@ -13,7 +13,7 @@ export function Projects() {
         ))}
       </div>
       <p className="meta mt-14 border-t border-dashed border-border pt-5 text-muted-foreground">
-        More projects coming soon — follow along on{" "}
+        See more of my work on{" "}
         <ExternalLink href={profile.github} className="link-rule text-foreground hover:text-accent-ink">
           GitHub
         </ExternalLink>

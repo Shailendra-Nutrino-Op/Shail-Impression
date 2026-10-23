@@ -1,4 +1,6 @@
+import { ArrowUpRight } from "lucide-react";
 import { certifications, education } from "@/content/portfolio";
+import { ExternalLink } from "./ExternalLink";
 
 export function Credentials() {
   return (
@@ -27,11 +29,26 @@ export function Credentials() {
           <ul className="mt-6">
             {certifications.map((c, i) => (
               <li
-                key={c}
+                key={c.name}
                 className="grid grid-cols-[2.25rem_1fr] border-b border-border py-4 leading-snug"
               >
                 <span className="eyebrow pt-0.5 text-muted-foreground">0{i + 1}</span>
-                <span>{c}</span>
+                <div>
+                  {c.url ? (
+                    <ExternalLink
+                      href={c.url}
+                      className="link-rule inline-flex items-baseline gap-1.5 font-medium hover:text-accent-ink"
+                    >
+                      {c.name}
+                      <ArrowUpRight className="h-3.5 w-3.5 self-center" aria-hidden />
+                    </ExternalLink>
+                  ) : (
+                    <span>{c.name}</span>
+                  )}
+                  {c.issuer && (
+                    <span className="meta mt-1 block text-muted-foreground">{c.issuer}</span>
+                  )}
+                </div>
               </li>
             ))}
           </ul>

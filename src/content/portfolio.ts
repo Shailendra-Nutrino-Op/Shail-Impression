@@ -1,5 +1,6 @@
 // Single source of truth for all portfolio content.
 // Edit values here; components render whatever is configured.
+import portraitSrc from "@/assets/shailendra-portrait.jpg";
 
 export const profile = {
   name: "Shailendra Kumar Bharti",
@@ -14,9 +15,13 @@ export const profile = {
   linkedinHandle: "in/shailendra-bharti",
   github: "https://github.com/Shailendra-Nutrino-Op",
   githubHandle: "Shailendra-Nutrino-Op",
-  // The actual PDF must be placed at public/resume.pdf
-  resumeHref: "/resume.pdf",
-  resumeFileName: "Shailendra-Kumar-Bharti-Resume.pdf",
+  /** Resume hosted on Google Drive; opens in a new tab. */
+  resumeHref:
+    "https://drive.google.com/file/d/188R_E8MH3lpxfPSKyLgtHg0zDeyRsAiI/view?usp=sharing",
+  portrait: {
+    src: portraitSrc,
+    alt: "Portrait of Shailendra Kumar Bharti",
+  },
 } as const;
 
 export const navItems = [
@@ -38,8 +43,8 @@ export const metrics: Metric[] = [
   {
     value: "35%",
     label: "Improvement in API response time",
-    context: "Authentication-Driven Polling System",
-    source: "Personal project · as reported in resume",
+    context: "JWT-secured Spring Boot polling application",
+    source: "Authentication-Driven Polling System",
   },
   {
     value: "40%",
@@ -63,6 +68,8 @@ export type Experience = {
   dates: string;
   project: string;
   domain: string;
+  /** Optional public link for the project. */
+  projectUrl?: string | undefined;
   highlights: string[];
   responsibilities: string[];
   stack: string[];
@@ -94,25 +101,33 @@ export const experience: Experience[] = [
     dates: "Aug 2023 – Apr 2026",
     project: "MMIS — Medicaid Management Information System",
     domain: "Healthcare services domain",
+    projectUrl: "https://www.nhmmis.nh.gov/portals/wps/portal/EnterpriseHome",
     highlights: [
       "Built a centralized audit dashboard capturing 100% of DML activities, reducing audit-related support effort by 40%.",
       "Optimized 15+ complex SQL queries through indexing and query refactoring — a 30% reduction in execution time.",
     ],
     responsibilities: [
       "Engineered application modules with event-driven microservices and REST APIs.",
+      "Worked on provider onboarding, secure REST APIs, batch processing and cloud-ready deployments.",
       "Mentored junior developers through code reviews and pair programming.",
       "Collaborated with onsite and offshore teams.",
     ],
     stack: [
       "Java",
       "Spring Boot",
+      "Microservices",
       "Kafka",
+      "RabbitMQ",
       "REST APIs",
       "ReactJS",
       "SQL",
-      "JPA",
+      "Spring Data JPA",
       "Hibernate",
       "Oracle",
+      "Redis",
+      "Docker",
+      "AWS",
+      "CI/CD",
     ],
   },
 ];
@@ -121,18 +136,22 @@ export type SkillGroup = { title: string; items: string[] };
 
 export const skillGroups: SkillGroup[] = [
   {
-    title: "Programming & frameworks",
+    title: "Backend & frameworks",
     items: [
+      "Java 8",
       "Java 17",
       "Spring Boot",
       "Spring Security",
       "Hibernate",
       "Spring Data JPA",
       "J2EE",
-      "ReactJS",
       "GenAI",
       "AIDLC",
     ],
+  },
+  {
+    title: "Frontend",
+    items: ["ReactJS", "Angular", "JavaScript", "Ant Design"],
   },
   { title: "Databases & caching", items: ["Oracle", "MySQL", "Redis", "MongoDB"] },
   {
@@ -141,7 +160,7 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     title: "APIs & messaging",
-    items: ["REST APIs", "Apache Kafka", "RabbitMQ", "WebSocket", "Microservices"],
+    items: ["REST APIs", "JWT", "Apache Kafka", "RabbitMQ", "WebSocket", "Microservices"],
   },
   {
     title: "Testing, monitoring & tools",
@@ -181,16 +200,16 @@ export const projects: Project[] = [
     name: "Authentication-Driven Polling System",
     type: "Personal project",
     description:
-      "A polling application built with Spring Boot and RESTful APIs, featuring JWT-based authentication.",
-    outcome: "35% improvement in API response time, as stated in my resume.",
+      "A full-stack polling application with a Spring Boot REST backend, a React front end and JWT-based authentication.",
+    outcome: "35% improvement in API response time.",
     problem:
-      "A poll is only meaningful when every vote is tied to a verified user. The aim was a polling backend where creating polls and casting votes require authentication, exposed through a clean, predictable REST interface.",
+      "A poll is only meaningful when every vote is tied to a verified user. The aim was a polling application where creating polls and casting votes require authentication, exposed through a clean, predictable REST interface.",
     implementation:
-      "A Spring Boot application exposing RESTful endpoints for poll and vote operations, with authentication enforced at the API layer so protected endpoints only respond to verified users.",
+      "A Spring Boot backend exposes RESTful endpoints for poll and vote operations, secured with Spring Security and backed by MySQL. A React front end built with Ant Design consumes the API.",
     authentication:
       "JWT-based: a user signs in and receives a signed token, which accompanies subsequent API requests so the server can verify identity on each call without holding session state.",
-    technologies: ["Spring Boot", "REST APIs", "JWT"],
-
+    technologies: ["Spring Boot", "Spring Security", "JWT", "REST APIs", "React", "Ant Design", "MySQL"],
+    repoUrl: "https://github.com/Shailendra-Nutrino-Op/authentication-driven-polling-system",
   },
 ];
 
@@ -202,9 +221,26 @@ export const education = {
   coursework: ["Data Structures", "DBMS", "Software Engineering"],
 };
 
-export const certifications = [
-  "Company appreciation certificates for technical excellence and teamwork",
-  "Spring Boot Essentials 2.0",
-  "Microservices Design Patterns",
-  "Solved 100+ DSA problems on CodeChef",
+export type Certification = {
+  name: string;
+  issuer?: string | undefined;
+  /** Set only to a real, verifiable certificate URL. */
+  url?: string | undefined;
+};
+
+export const certifications: Certification[] = [
+  {
+    name: "Java Explorer Certification",
+    issuer: "Oracle / Java · LinkedIn Learning",
+    url: "https://www.linkedin.com/learning/certificates/e7c4e3ef846217164750226a5fbddd68796bea1b94ba14fbc3a43e50da9c3be8",
+  },
+  {
+    name: "Spring Boot & Microservices Fundamentals",
+    issuer: "LinkedIn Learning",
+    url: "https://www.linkedin.com/learning/certificates/737932f32888a94c40ac196fbfb57d8585bf62a60e3d367d9d8fa03d6661aeb7",
+  },
+  { name: "Spring Boot Essentials 2.0" },
+  { name: "Microservices Design Patterns" },
+  { name: "Company appreciation certificates for technical excellence and teamwork" },
+  { name: "Solved 100+ DSA problems on CodeChef" },
 ];
