@@ -1,4 +1,6 @@
+import { ArrowUpRight } from "lucide-react";
 import type { Experience } from "@/content/portfolio";
+import { ExternalLink } from "./ExternalLink";
 
 export function ExperienceEntry({ item }: { item: Experience }) {
   return (
@@ -13,7 +15,17 @@ export function ExperienceEntry({ item }: { item: Experience }) {
       <div className="md:col-span-8">
         <p className="text-xl font-semibold">{item.title}</p>
         <p className="mt-2">
-          <span className="font-medium">{item.project}</span>
+          {item.projectUrl ? (
+            <ExternalLink
+              href={item.projectUrl}
+              className="link-rule inline-flex items-baseline gap-1 font-medium hover:text-accent-ink"
+            >
+              {item.project}
+              <ArrowUpRight className="h-4 w-4 self-center" aria-hidden />
+            </ExternalLink>
+          ) : (
+            <span className="font-medium">{item.project}</span>
+          )}
           <span className="meta ml-2 text-muted-foreground">/ {item.domain}</span>
         </p>
 

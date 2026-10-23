@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { Download, Menu, X } from "lucide-react";
+import { FileText, Menu, X } from "lucide-react";
 import { navItems, profile } from "@/content/portfolio";
+import { ExternalLink } from "./ExternalLink";
 
 function useActiveSection(ids: readonly string[]) {
   const [active, setActive] = useState<string | null>(null);
@@ -96,14 +97,10 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <a
-            href={profile.resumeHref}
-            download={profile.resumeFileName}
-            className="btn btn-solid hidden sm:inline-flex"
-          >
-            <Download className="h-4 w-4" aria-hidden />
+          <ExternalLink href={profile.resumeHref} className="btn btn-solid hidden sm:inline-flex">
+            <FileText className="h-4 w-4" aria-hidden />
             Resume
-          </a>
+          </ExternalLink>
           <button
             type="button"
             className="btn btn-outline px-3 md:hidden"
@@ -138,15 +135,14 @@ export function SiteHeader() {
             </li>
           ))}
           <li className="py-4">
-            <a
+            <ExternalLink
               href={profile.resumeHref}
-              download={profile.resumeFileName}
               onClick={() => setOpen(false)}
               className="btn btn-solid w-full"
             >
-              <Download className="h-4 w-4" aria-hidden />
-              Download Resume
-            </a>
+              <FileText className="h-4 w-4" aria-hidden />
+              View Resume
+            </ExternalLink>
           </li>
         </ul>
       </nav>

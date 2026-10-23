@@ -1,3 +1,4 @@
+import { profile } from "@/content/portfolio";
 import { SectionHeading } from "./SectionHeading";
 
 const practices = [
@@ -19,7 +20,22 @@ export function About() {
             label="About"
             title="How I approach engineering"
           />
-          <p className="meta mt-8 max-w-[34ch] text-muted-foreground">
+          <figure className="mt-10 max-w-[340px]">
+            <div className="border border-rule bg-card p-2">
+              <img
+                src={profile.portrait.src}
+                alt={profile.portrait.alt}
+                width={853}
+                height={925}
+                loading="lazy"
+                className="aspect-[853/925] w-full object-cover grayscale-[15%]"
+              />
+            </div>
+            <figcaption className="meta mt-3 text-muted-foreground">
+              {profile.name} · Java Backend Developer
+            </figcaption>
+          </figure>
+          <p className="meta mt-6 max-w-[34ch] text-muted-foreground">
             Associate Software Engineer · 3+ years · Java, Spring Boot, microservices · Healthcare
             &amp; investment domains
           </p>
