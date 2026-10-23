@@ -36,7 +36,7 @@ export function About() {
             </figcaption>
           </figure>
           <p className="meta mt-6 max-w-[34ch] text-muted-foreground">
-            Associate Software Engineer · 3+ years · Java, Spring Boot, microservices · Healthcare
+            Software Engineer · 3.7+ years · Java, Spring Boot, microservices · Healthcare
             &amp; investment domains
           </p>
         </div>

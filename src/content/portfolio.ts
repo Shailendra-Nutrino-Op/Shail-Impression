@@ -7,7 +7,7 @@ export const profile = {
   shortName: "S. K. Bharti",
   title: "Java Backend / Full Stack Developer",
   summary:
-    "Associate Software Engineer with 3+ years of experience in Java, Spring Boot and microservices. Experienced in building REST APIs, improving system performance, and implementing secure, cloud-based solutions using AWS and Kafka. Experience across healthcare and investment domain applications.",
+    "Software Engineer with 3.7+ years of experience in Java, Spring Boot and microservices. Experienced in building REST APIs, improving system performance, and implementing secure, cloud-based solutions using AWS and Kafka. Experience across healthcare and investment domain applications.",
   email: "shailendrabharti8668@gmail.com",
   phoneDisplay: "+91-9580733077",
   phoneHref: "tel:+919580733077",

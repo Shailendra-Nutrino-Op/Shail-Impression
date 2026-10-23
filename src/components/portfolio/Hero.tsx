@@ -69,7 +69,7 @@ export function Hero() {
                 LinkedIn
               </ExternalLink>
             </li>
-            <li className="meta text-muted-foreground">3+ yrs · Healthcare &amp; Investment</li>
+            <li className="meta text-muted-foreground">3.7+ yrs · Healthcare &amp; Investment</li>
           </ul>
         </div>
 

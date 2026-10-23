@@ -12,7 +12,7 @@ import { SiteFooter } from "@/components/portfolio/SiteFooter";
 
 const title = "Shailendra Kumar Bharti — Java Backend / Full Stack Developer";
 const description =
-  "Java & Spring Boot developer with 3+ years building REST APIs, Kafka-driven microservices and performance-focused systems across healthcare and investment domains.";
+  "Java & Spring Boot developer with 3.7+ years building REST APIs, Kafka-driven microservices and performance-focused systems across healthcare and investment domains.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
