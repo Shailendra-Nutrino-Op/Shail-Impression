@@ -63,8 +63,8 @@ export function SiteHeader() {
           className="group flex items-baseline gap-2 font-display text-lg font-semibold tracking-tight"
           aria-label={`${profile.name} — back to top`}
         >
-          <span className="hidden sm:inline">{profile.name}</span>
-          <span className="sm:hidden">{profile.shortName}</span>
+          <span className="hidden whitespace-nowrap lg:inline">{profile.name}</span>
+          <span className="whitespace-nowrap lg:hidden">{profile.shortName}</span>
           <span className="inline-block h-1.5 w-1.5 translate-y-[-2px] rounded-full bg-accent transition-transform group-hover:scale-150" />
         </a>
 
