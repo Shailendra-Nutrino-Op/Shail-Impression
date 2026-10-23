@@ -1,4 +1,4 @@
-import { ArrowUpRight, Download, Github, Linkedin, Mail, Phone } from "lucide-react";
+import { ArrowUpRight, FileText, Github, Linkedin, Mail, Phone } from "lucide-react";
 import type { ReactNode } from "react";
 import { profile } from "@/content/portfolio";
 import { ExternalLink } from "./ExternalLink";
@@ -66,14 +66,10 @@ export function Contact() {
             Let's connect about Java development, backend engineering and building reliable
             applications.
           </p>
-          <a
-            href={profile.resumeHref}
-            download={profile.resumeFileName}
-            className="btn btn-outline mt-8"
-          >
-            <Download className="h-4 w-4" aria-hidden />
-            Download Resume (PDF)
-          </a>
+          <ExternalLink href={profile.resumeHref} className="btn btn-outline mt-8">
+            <FileText className="h-4 w-4" aria-hidden />
+            View Resume
+          </ExternalLink>
         </div>
 
         <ul className="border-t border-rule lg:col-span-6 lg:mt-14">

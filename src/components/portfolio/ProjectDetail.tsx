@@ -31,7 +31,7 @@ export function ProjectDetail({ project }: { project: Project }) {
 
           {project.outcome && (
             <p className="mt-6 border-l-2 border-accent pl-4">
-              <span className="eyebrow block text-accent-ink">Reported outcome</span>
+              <span className="eyebrow block text-accent-ink">Outcome</span>
               <span className="mt-1 block font-medium">{project.outcome}</span>
             </p>
           )}
