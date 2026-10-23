@@ -164,15 +164,15 @@ export type Project = {
   name: string;
   type: string;
   description: string;
-  outcome?: string;
+  outcome?: string | undefined;
   problem: string;
   implementation: string;
-  authentication?: string;
+  authentication?: string | undefined;
   technologies: string[];
   /** Set only to a real repository URL. Leave undefined to hide the link. */
-  repoUrl?: string;
+  repoUrl?: string | undefined;
   /** Set only if a real live demo exists. */
-  demoUrl?: string;
+  demoUrl?: string | undefined;
 };
 
 export const projects: Project[] = [
@@ -190,7 +190,7 @@ export const projects: Project[] = [
     authentication:
       "JWT-based: a user signs in and receives a signed token, which accompanies subsequent API requests so the server can verify identity on each call without holding session state.",
     technologies: ["Spring Boot", "REST APIs", "JWT"],
-    repoUrl: undefined,
+
   },
 ];
 

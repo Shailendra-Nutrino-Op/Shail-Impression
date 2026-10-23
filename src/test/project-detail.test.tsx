@@ -3,7 +3,7 @@ import { describe, expect, it } from "vitest";
 import { ProjectDetail } from "@/components/portfolio/ProjectDetail";
 import { projects, type Project } from "@/content/portfolio";
 
-const base = projects[0];
+const base = projects[0]!;
 
 describe("ProjectDetail", () => {
   it("shows no repository or demo link when no real URL is configured", () => {
