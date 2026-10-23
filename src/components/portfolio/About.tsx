@@ -25,10 +25,10 @@ export function About() {
               <img
                 src={profile.portrait.src}
                 alt={profile.portrait.alt}
-                width={853}
-                height={925}
+                width={400}
+                height={400}
                 loading="lazy"
-                className="aspect-[853/925] w-full object-cover grayscale-[15%]"
+                className="aspect-square w-full object-cover grayscale-[15%]"
               />
             </div>
             <figcaption className="meta mt-3 text-muted-foreground">
