@@ -1,3 +1,4 @@
+```typescript
 // Single source of truth for all portfolio content.
 // Edit values here; components render whatever is configured.
 
@@ -42,25 +43,29 @@ export const metrics: Metric[] = [
   {
     value: "GenAI",
     label: "REST APIs & backend features",
-    context: "Built with Java, Spring Boot and GenAI for retirement plan administration",
+    context:
+      "Built with Java, Spring Boot and GenAI for retirement plan administration",
     source: "ICON · Accenture",
   },
   {
     value: "Kafka",
     label: "Event-driven plan features",
-    context: "Spring Boot services with JUnit, L1 integration tests and Jenkins CI builds",
+    context:
+      "Spring Boot services with JUnit, L1 integration tests and Jenkins CI builds",
     source: "ICON · Accenture",
   },
   {
     value: "40%",
     label: "Less audit-related support effort",
-    context: "Centralized audit dashboard capturing 100% of DML activity",
+    context:
+      "Centralized audit dashboard capturing 100% of DML activity",
     source: "MMIS · Infinite Computer Solution",
   },
   {
     value: "30%",
     label: "Faster SQL query execution",
-    context: "15+ complex queries optimised via indexing and refactoring",
+    context:
+      "15+ complex queries optimised via indexing and refactoring",
     source: "MMIS · Infinite Computer Solution",
   },
 ];
@@ -106,7 +111,8 @@ export const experience: Experience[] = [
     dates: "Aug 2023 – Apr 2026",
     project: "MMIS — Medicaid Management Information System",
     domain: "Healthcare services domain",
-    projectUrl: "https://www.nhmmis.nh.gov/portals/wps/portal/EnterpriseHome",
+    projectUrl:
+      "https://www.nhmmis.nh.gov/portals/wps/portal/EnterpriseHome",
     highlights: [
       "Built a centralized audit dashboard capturing 100% of DML activities, reducing audit-related support effort by 40%.",
       "Optimized 15+ complex SQL queries through indexing and query refactoring — a 30% reduction in execution time.",
@@ -158,14 +164,24 @@ export const skillGroups: SkillGroup[] = [
     title: "Frontend",
     items: ["ReactJS", "Angular", "JavaScript", "Ant Design"],
   },
-  { title: "Databases & caching", items: ["Oracle", "MySQL", "Redis", "MongoDB"] },
+  {
+    title: "Databases & caching",
+    items: ["Oracle", "MySQL", "Redis", "MongoDB"],
+  },
   {
     title: "Cloud, DevOps & CI/CD",
     items: ["AWS EC2", "AWS S3", "AWS RDS", "Docker", "Jenkins", "Git", "Maven"],
   },
   {
     title: "APIs & messaging",
-    items: ["REST APIs", "JWT", "Apache Kafka", "RabbitMQ", "WebSocket", "Microservices"],
+    items: [
+      "REST APIs",
+      "JWT",
+      "Apache Kafka",
+      "RabbitMQ",
+      "WebSocket",
+      "Microservices",
+    ],
   },
   {
     title: "Testing, monitoring & tools",
@@ -213,8 +229,17 @@ export const projects: Project[] = [
       "A Spring Boot backend exposes RESTful endpoints for poll and vote operations, secured with Spring Security and backed by MySQL. A React front end built with Ant Design consumes the API.",
     authentication:
       "JWT-based: a user signs in and receives a signed token, which accompanies subsequent API requests so the server can verify identity on each call without holding session state.",
-    technologies: ["Spring Boot", "Spring Security", "JWT", "REST APIs", "React", "Ant Design", "MySQL"],
-    repoUrl: "https://github.com/Shailendra-Nutrino-Op/authentication-driven-polling-system",
+    technologies: [
+      "Spring Boot",
+      "Spring Security",
+      "JWT",
+      "REST APIs",
+      "React",
+      "Ant Design",
+      "MySQL",
+    ],
+    repoUrl:
+      "https://github.com/Shailendra-Nutrino-Op/authentication-driven-polling-system",
   },
 ];
 
@@ -246,6 +271,9 @@ export const certifications: Certification[] = [
   },
   { name: "Spring Boot Essentials 2.0" },
   { name: "Microservices Design Patterns" },
-  { name: "Company appreciation certificates for technical excellence and teamwork" },
+  {
+    name: "Company appreciation certificates for technical excellence and teamwork",
+  },
   { name: "Solved 100+ DSA problems on CodeChef" },
 ];
+```
