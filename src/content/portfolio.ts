@@ -41,10 +41,16 @@ export type Metric = {
 
 export const metrics: Metric[] = [
   {
-    value: "35%",
-    label: "Improvement in API response time",
-    context: "JWT-secured Spring Boot polling application",
-    source: "Authentication-Driven Polling System",
+    value: "GenAI",
+    label: "REST APIs & backend features",
+    context: "Built with Java, Spring Boot and GenAI for retirement plan administration",
+    source: "ICON · Accenture",
+  },
+  {
+    value: "Kafka",
+    label: "Event-driven plan features",
+    context: "Spring Boot services with JUnit, L1 integration tests and Jenkins CI builds",
+    source: "ICON · Accenture",
   },
   {
     value: "40%",
